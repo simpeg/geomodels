@@ -21,10 +21,10 @@ Having representative models of geologic settings that can be populated with phy
 ## A sketch of an idea 
 
 ```python
-from GeoModels import Geothermal
-from SimPEG import Mesh
+from geomodels import geothermal
+import discretize
 
-mesh = Mesh.TensorMesh()
-model = Geothermal.CanonicalModel()
+mesh = discretize.TensorMesh()
+model = geothermal.CanonicalModel()
 sigma = model.tomesh(mesh)
 ```
